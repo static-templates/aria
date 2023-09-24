@@ -1,3 +1,11 @@
-# static-starter
+# Aria Template
 
-> This is the old static starter kit repo. The new version will live at https://github.com/static/static-starter
+This is a personal blog, portfolio, or blog template created for [Static](https://static.devdojo.com).
+
+![Aria Template Cover Photo](https://raw.githubusercontent.com/static-templates/aria/main/assets/images/cover.jpg)
+
+You can install this theme with the [static](https://www.npmjs.com/package/@devdojo/static) new command like so:
+
+```
+static new folder-name --template=aria
+```
