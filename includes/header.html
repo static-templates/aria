@@ -1,0 +1,53 @@
+<!-- This is an invisible div with relative position so that it takes up the height of the menu (because menu is absolute/fixed) -->
+<div class="relative w-full h-20 opacity-0 pointer-events-none"></div>
+<header class="absolute top-0 z-50 w-full h-20" x-data x-init="
+    console.log('init');
+    const stickyClasses = ['fixed', 'h-12'];
+    const unstickyClasses = ['absolute', 'h-20'];
+    const stickyClassesContainer = ['border-neutral-200/60' , 'bg-white/80', 'backdrop-blur-2xl'];
+    const unstickyClassesContainer = ['border-transparent'];
+    window.addEventListener('scroll', function() {
+            if(window.scrollY > 16){
+                console.log('heyo');
+                $el.firstElementChild.classList.add(...stickyClassesContainer);
+                $el.firstElementChild.classList.remove(...unstickyClassesContainer);
+                $el.classList.add(...stickyClasses);
+                $el.classList.remove(...unstickyClasses);
+            } else {
+                $el.firstElementChild.classList.remove(...stickyClassesContainer);
+                $el.firstElementChild.classList.add(...unstickyClassesContainer);
+                $el.classList.add(...unstickyClasses);
+                $el.classList.remove(...stickyClasses);
+            }
+        });
+    ">
+    <div class="flex items-center justify-between h-full max-w-5xl px-5 mx-auto border border-t-0 border-transparent select-none rounded-b-xl">
+        
+        <include src="logo.html"></include>
+        
+        <nav class="relative flex flex-row-reverse justify-end w-full text-sm text-neutral-500 sm:flex-row">
+            <div id="openMenu" class="flex flex-col items-end justify-center block w-6 h-6 ml-4 cursor-pointer sm:hidden">
+                <svg class="w-8 h-8 dark:text-neutral-200" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 8h16M4 16h16"></path></svg>
+            </div>
+            <div id="closeMenu" class="fixed top-0 right-0 z-50 flex flex-col items-end justify-center hidden w-8 h-8 p-1 mt-6 ml-4 mr-6 rounded-lg cursor-pointer sm:hidden">
+                <svg class="w-6 h-6 text-neutral-600 dark:text-neutral-200" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+            </div>
+            <div id="menu" class="absolute top-0 left-0 z-40 flex-col items-end justify-start hidden w-full h-screen pt-20 pr-4 text-xl sm:h-auto sm:relative sm:flex-row sm:flex sm:text-sm sm:w-auto sm:pr-0 sm:pt-0">
+                <div class="absolute inset-0 top-0 right-0 block w-full h-full bg-white shadow-sm dark:bg-neutral-900 sm:hidden"></div>
+                <ForEach collection="menu">
+                    <a href="{menu.url}" :class="{ 'text-neutral-900': '{menu.url}' == '/' }" class="relative flex items-center inline px-3 font-medium tracking-wide duration-200 ease-out hover:text-neutral-900 dark:text-white">{menu.name}</a>
+                </ForEach>
+            </div>
+            <div id="darkToggle" class="relative flex items-center pl-6 ml-4 font-medium tracking-wide cursor-pointer text-neutral-800 group dark:text-white"> 
+                <div class="absolute left-0 flex items-center justify-center w-6 h-6 overflow-hidden border-b border-transparent horizon group-hover:border-neutral-600">
+                    <svg class="absolute w-6 h-6 transition duration-700 transform ease" id="sun" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <svg class="absolute hidden w-6 h-6 transition duration-700 transform ease" id="moon" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                </div> 
+                <span class="hidden sm:inline-block">
+                    <span id="dayText" class="ml-2">Day mode</span>
+                    <span id="nightText" class="hidden ml-2">Night mode</span>
+                </span>
+            </div>
+        </nav>
+    </div>
+</header>

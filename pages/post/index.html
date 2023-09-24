@@ -1,0 +1,15 @@
+<layout title="{frontmatter.title}" src="main.html">
+
+    <main class="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white rounded-t-md text-neutral-900">
+        <div class="px-24 pt-20 border border-b-0 rounded-t-md border-neutral-100">
+            <div class="absolute left-0 top-0 mt-1 w-px h-[600px] bg-gradient-to-b from-neutral-100 to-transparent"></div>
+            <div class="absolute right-0 top-0 mt-1 w-px h-[600px] bg-gradient-to-b from-neutral-100 to-transparent"></div>
+            <h1 class="px-3 mb-12 text-3xl font-bold leading-tight tracking-tighter md:text-4xl lg:text-5xl md:leading-none">{frontmatter.title}</h1>
+        </div>
+        
+        <article class="w-full max-w-2xl mx-auto mb-20 prose-sm prose lg:prose-lg">
+            {content}
+        </article>
+    </main>
+
+</layout>

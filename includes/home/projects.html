@@ -1,0 +1,16 @@
+<section class="max-w-4xl mx-auto">
+    <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900">My Projects</h2>
+    <div class="w-full space-y-10">
+        <ForEach collection="projects" count="3">
+            <div class="relative flex items-center p-3 border border-dashed border-neutral-200">
+                <div class="w-1/3">
+                    <img src="{projects.image}" class="w-full h-auto rounded-md" />
+                </div>
+                <div class="w-2/3">
+                    <h3 class="text-xl font-bold leading-10 tracking-tight text-neutral-900">{projects.name}</h3>
+                    <p>{projects.description}</p>
+                </div>
+            </div>
+        </ForEach>
+    </div>
+</section>

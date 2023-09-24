@@ -1,0 +1,32 @@
+[
+    {
+        "name" : "Tails",
+        "description": "Create websites with Tailwind CSS",
+        "image" : "/assets/images/projects/tails.jpeg"
+    },
+    {
+        "name" : "Wave",
+        "description": "Start building the next great SaaS",
+        "image" : "/assets/images/projects/wave.jpeg"
+    },
+    {
+        "name" : "Pines",
+        "description": "Alpine and Tailwind UI library",
+        "image" : "/assets/images/projects/pines.jpeg"
+    },
+    {
+        "name" : "DevBlog",
+        "description": "Create a professional dev blog",
+        "image" : "/assets/images/projects/devblog.jpeg"
+    },
+    {
+        "name" : "MarkdownX",
+        "description": "The Markdown Editor of the future",
+        "image" : "/assets/images/projects/markdownx.jpeg"
+    },
+    {
+        "name" : "SaaS Adventure",
+        "description": "21-day program for building a SAAS",
+        "image" : "/assets/images/projects/saasadventure.jpeg"
+    }
+]
