@@ -2,31 +2,37 @@
     {
         "name" : "Tails",
         "description": "Create websites with Tailwind CSS",
-        "image" : "/assets/images/projects/tails.jpeg"
+        "image" : "/assets/images/projects/tails.jpeg",
+        "url" : "https://devdojo.com/tails"
     },
     {
         "name" : "Wave",
         "description": "Start building the next great SaaS",
-        "image" : "/assets/images/projects/wave.jpeg"
+        "image" : "/assets/images/projects/wave.jpeg",
+        "url" : "https://devdojo.com/wave"
     },
     {
         "name" : "Pines",
         "description": "Alpine and Tailwind UI library",
-        "image" : "/assets/images/projects/pines.jpeg"
+        "image" : "/assets/images/projects/pines.jpeg",
+        "url" : "https://devdojo.com/pines"
     },
     {
         "name" : "DevBlog",
         "description": "Create a professional dev blog",
-        "image" : "/assets/images/projects/devblog.jpeg"
+        "image" : "/assets/images/projects/devblog.jpeg",
+        "url" : "https://devdojo.com/devblog"
     },
     {
         "name" : "MarkdownX",
         "description": "The Markdown Editor of the future",
-        "image" : "/assets/images/projects/markdownx.jpeg"
+        "image" : "/assets/images/projects/markdownx.jpeg",
+        "url" : "https://devdojo.com/markdownx"
     },
     {
         "name" : "SaaS Adventure",
         "description": "21-day program for building a SAAS",
-        "image" : "/assets/images/projects/saasadventure.jpeg"
+        "image" : "/assets/images/projects/saasadventure.jpeg",
+        "url" : "https://saasadventure.io"
     }
 ]

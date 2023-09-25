@@ -35,7 +35,7 @@
             <div id="menu" class="absolute top-0 left-0 z-40 flex-col items-end justify-start hidden w-full h-screen pt-20 pr-4 text-xl sm:h-auto sm:relative sm:flex-row sm:flex sm:text-sm sm:w-auto sm:pr-0 sm:pt-0">
                 <div class="absolute inset-0 top-0 right-0 block w-full h-full bg-white shadow-sm dark:bg-neutral-900 sm:hidden"></div>
                 <ForEach collection="menu">
-                    <a href="{menu.url}" :class="{ 'text-neutral-900': '{menu.url}' == '/' }" class="relative flex items-center inline px-3 font-medium tracking-wide duration-200 ease-out hover:text-neutral-900 dark:text-white">{menu.name}</a>
+                    <a href="{menu.url}" :class="{ 'text-neutral-900': window.location.pathname == '{menu.url}' }" class="relative flex items-center inline px-3 font-medium tracking-wide duration-200 ease-out hover:text-neutral-900 dark:text-white">{menu.name}</a>
                 </ForEach>
             </div>
             <div id="darkToggle" class="relative flex items-center pl-6 ml-4 font-medium tracking-wide cursor-pointer text-neutral-800 group dark:text-white"> 
