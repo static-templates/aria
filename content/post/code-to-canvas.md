@@ -1,8 +1,10 @@
 ---
 title: Code to Canvas
-description: This is a post about how creating and developing a blog for yourself can be beneficial
+description: This is a post about how creating and developing a blog for yourself can be beneficial and how building your audience is important.
 dateFormatted: July 7th, 2023
 ---
+
+![Coffee and Code](/assets/images/posts/code-canvas.jpg)
 
 Starting a blog as a developer is not just about sharing code snippets or technical tutorials. It's about sharing a piece of yourself, your experiences, and your unique perspective on the world of technology. Every developer has their own way of explaining things, and by putting your knowledge out there, you're not only helping others but also carving a niche for yourself in the vast digital landscape.
 
