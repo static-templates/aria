@@ -1,0 +1,23 @@
+[
+    {
+        "dates" : "June 2023 · Present",
+        "role" : "Full-stack Developer",
+        "company" : "DevDojo",
+        "description" : "I've been having a blast designing and developing new tools for developers. I love working with the team and I'm excited to see what we can do next.",
+        "logo" : "/assets/images/experiences/devdojo.png"
+    },
+    {
+        "dates" : "May 2018 · June 2023",
+        "role" : "Team Lead Designer",
+        "company" : "Google",
+        "description" : "As team lead designer for Google, I was responsible for the design and development of the Google Chrome Web Experience.",
+        "logo" : "/assets/images/experiences/google.png"
+    },
+    {
+        "dates" : "January 2016 · May 2018 ",
+        "role" : "Junior Developer/Designer",
+        "company" : "Adobe",
+        "description" : "In this role I was responsible for helping out with the development of the Adobe Creative Cloud. I helped design many aspects of the product.",
+        "logo" : "/assets/images/experiences/adobe.png"
+    }
+]

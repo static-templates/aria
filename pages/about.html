@@ -1,0 +1,48 @@
+<layout src="main.html" title="About Me">
+
+    <section class="relative z-20 max-w-2xl px-5 mx-auto my-12 lg:px-0">
+        <include 
+            src="page-heading.html" 
+            title="About Me" 
+            description="Hello 👋 I'm an adventurous software engineer and designer from San Diego, CA. I'm passionate about building new products and learning new technology."
+        ></include>
+        
+        <img src="/assets/images/about.jpg" class="relative z-30 w-full my-10 rounded-xl" />
+
+        <h2 class="mb-2 text-2xl font-bold">Short Bio</h2>
+        <p class="text-sm leading-6 text-gray-600 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">I enjoy going on adventures and hiking with my friends. I also love all things vintage and retro. I have a passion for artisanal coffee, vinyl records, and indie films. You can often find me exploring thrift stores and attending local music festivals.</p>
+
+        <h2 class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6">Career</h2>
+        <p class="text-sm leading-6 text-gray-600 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">After graduating college I landed an excellent job with Adobe. A few years later I worked for Google as a team lead on the design team. I am currently working for DevDojo and building some cool developer and designer tools.</p>
+
+        <h2 class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6">Experience</h2>
+        <div class="px-5 py-10">
+            <ForEach collection="experiences" as="experience">
+                
+                <If condition="loop == 1 || loop == 2">
+                    <div class="pb-10 border-l border-gray-200">
+                </If>
+
+                <include 
+                    src="about-experience.html" 
+                    dates="{experience.dates}"
+                    role="{experience.role}"
+                    company="{experience.company}"
+                    description="{experience.description}"
+                    logo="{experience.logo}"
+                ></include>
+
+                <If condition="loop == 1 || loop == 2">
+                    </div>
+                </If>
+            
+            </ForEach>
+        </div>
+
+
+        <h2 class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6">Let's Connect</h2>
+        <p class="text-sm leading-6 text-gray-600 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">If you want to stay up to date with my work be sure to <a href="https://twitter.com/tnylea" target="_blank" class="text-indigo-600 underline">follow me on twitter</a>, or you can send me an <a href="#_" class="text-indigo-600 underline">email</a> and I'll be sure to get back to you.</p>
+
+    </section>
+
+</layout>
