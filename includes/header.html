@@ -1,31 +1,11 @@
 <!-- This is an invisible div with relative position so that it takes up the height of the menu (because menu is absolute/fixed) -->
 <div class="relative w-full h-20 opacity-0 pointer-events-none"></div>
-<header class="absolute top-0 z-50 w-full h-20" x-data x-init="
-    console.log('init');
-    const stickyClasses = ['fixed', 'h-12'];
-    const unstickyClasses = ['absolute', 'h-20'];
-    const stickyClassesContainer = ['border-neutral-200/60' , 'bg-white/80', 'backdrop-blur-2xl'];
-    const unstickyClassesContainer = ['border-transparent'];
-    window.addEventListener('scroll', function() {
-            if(window.scrollY > 16){
-                console.log('heyo');
-                $el.firstElementChild.classList.add(...stickyClassesContainer);
-                $el.firstElementChild.classList.remove(...unstickyClassesContainer);
-                $el.classList.add(...stickyClasses);
-                $el.classList.remove(...unstickyClasses);
-            } else {
-                $el.firstElementChild.classList.remove(...stickyClassesContainer);
-                $el.firstElementChild.classList.add(...unstickyClassesContainer);
-                $el.classList.add(...unstickyClasses);
-                $el.classList.remove(...stickyClasses);
-            }
-        });
-    ">
+<header id="header" class="absolute top-0 z-50 w-full h-20">
     <div class="flex items-center justify-between h-full max-w-5xl px-5 mx-auto border border-t-0 border-transparent select-none rounded-b-xl">
         
         <include src="logo.html"></include>
         
-        <nav class="relative flex flex-row-reverse justify-end w-full text-sm text-neutral-500 sm:flex-row">
+        <nav class="relative flex flex-row-reverse justify-end w-full text-sm text-neutral-500 dark:text-neutral-400 sm:flex-row">
             <div id="openMenu" class="flex flex-col items-end justify-center block w-6 h-6 ml-4 cursor-pointer sm:hidden">
                 <svg class="w-8 h-8 dark:text-neutral-200" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 8h16M4 16h16"></path></svg>
             </div>
@@ -35,7 +15,7 @@
             <div id="menu" class="absolute top-0 left-0 z-40 flex-col items-end justify-start hidden w-full h-screen pt-20 pr-4 text-xl sm:h-auto sm:relative sm:flex-row sm:flex sm:text-sm sm:w-auto sm:pr-0 sm:pt-0">
                 <div class="absolute inset-0 top-0 right-0 block w-full h-full bg-white shadow-sm dark:bg-neutral-900 sm:hidden"></div>
                 <ForEach collection="menu">
-                    <a href="{menu.url}" :class="{ 'text-neutral-900': window.location.pathname == '{menu.url}' }" class="relative flex items-center inline px-3 font-medium tracking-wide duration-200 ease-out hover:text-neutral-900 dark:text-white">{menu.name}</a>
+                    <a href="{menu.url}" class="relative flex items-center inline px-3 font-medium tracking-wide duration-200 ease-out hover:text-neutral-900 dark:hover:text-white">{menu.name}</a>
                 </ForEach>
             </div>
             <div id="darkToggle" class="relative flex items-center pl-6 ml-4 font-medium tracking-wide cursor-pointer text-neutral-800 group dark:text-white"> 

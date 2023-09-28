@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600700&display=swap" rel="stylesheet">
-    <style>
-        .custom-font {
-            font-family: 'Poppins', sans-serif;
+
+    <!-- Used to add dark mode right away, adding here prevents any flicker -->
+    <script>
+        if (typeof(Storage) !== "undefined") {
+            if(localStorage.getItem('dark_mode') && localStorage.getItem('dark_mode') == 'true'){
+                document.documentElement.classList.add('dark');
+            }
         }
+    </script>
+    
+    <style>
         .prose img{
             border-radius: 20px;
         }
@@ -20,7 +23,7 @@
     <script src="//unpkg.com/alpinejs" defer></script>
     {tailwindcss}
 </head>
-<body class="antialiased bg-white">
+<body class="antialiased bg-white dark:bg-neutral-950">
     <include src="square-lines.html"></include>
     <include src="header.html"></include>
     {slot}
