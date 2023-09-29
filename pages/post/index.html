@@ -1,13 +1,13 @@
 <layout title="{frontmatter.title}" src="main.html">
 
-    <main class="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white rounded-t-md text-neutral-900">
-        <div class="relative flex flex-col px-24 pt-20 border border-b-0 border-dashed justify-stretch rounded-t-2xl border-neutral-300">
-            <div class="absolute top-0 left-0 w-px h-full mt-1 -translate-x-px bg-gradient-to-b from-transparent to-white"></div>
-            <div class="absolute top-0 right-0 w-px h-full mt-1 translate-x-px bg-gradient-to-b from-transparent to-white"></div>
-            <h1 class="px-3 mb-12 text-3xl font-bold leading-tight tracking-tighter md:text-4xl lg:text-5xl md:leading-none">{frontmatter.title}</h1>
+    <main class="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white dark:bg-neutral-950 rounded-t-md text-neutral-900">
+        <div class="relative flex flex-col px-24 pt-20 border border-b-0 justify-stretch rounded-t-2xl border-neutral-200 dark:border-neutral-800">
+            <div class="absolute top-0 left-0 w-px h-full mt-1 -translate-x-px bg-gradient-to-b from-transparent to-white dark:to-neutral-950"></div>
+            <div class="absolute top-0 right-0 w-px h-full mt-1 translate-x-px bg-gradient-to-b from-transparent to-white dark:to-neutral-950"></div>
+            <h1 class="px-3 mb-12 text-3xl font-bold leading-tight tracking-tighter md:text-4xl dark:text-neutral-100 lg:text-5xl md:leading-none">{frontmatter.title}</h1>
         </div>
         
-        <article class="w-full max-w-2xl mx-auto mb-20 prose-sm prose lg:prose-lg">
+        <article class="w-full max-w-2xl mx-auto mb-20 prose-sm prose lg:prose-lg dark:prose-invert">
             {content}
         </article>
     </main>

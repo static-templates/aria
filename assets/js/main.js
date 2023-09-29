@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     stickyHeaderFuncionality();
     applyMenuItemClasses();
+    evaluateHeaderPosition();
 });
 
 // window.toggleDarkMode = function(){
@@ -37,19 +38,22 @@ document.addEventListener('DOMContentLoaded', function(){
 
 window.stickyHeaderFuncionality = function(){
     window.addEventListener('scroll', function() {
-        if(window.scrollY > 16){
-            console.log('heyo');
-            headerElement.firstElementChild.classList.add(...stickyClassesContainer);
-            headerElement.firstElementChild.classList.remove(...unstickyClassesContainer);
-            headerElement.classList.add(...stickyClasses);
-            headerElement.classList.remove(...unstickyClasses);
-        } else {
-            headerElement.firstElementChild.classList.remove(...stickyClassesContainer);
-            headerElement.firstElementChild.classList.add(...unstickyClassesContainer);
-            headerElement.classList.add(...unstickyClasses);
-            headerElement.classList.remove(...stickyClasses);
-        }
+        evaluateHeaderPosition();
     });
+}
+
+window.evaluateHeaderPosition = function(){
+    if(window.scrollY > 16){
+        headerElement.firstElementChild.classList.add(...stickyClassesContainer);
+        headerElement.firstElementChild.classList.remove(...unstickyClassesContainer);
+        headerElement.classList.add(...stickyClasses);
+        headerElement.classList.remove(...unstickyClasses);
+    } else {
+        headerElement.firstElementChild.classList.remove(...stickyClassesContainer);
+        headerElement.firstElementChild.classList.add(...unstickyClassesContainer);
+        headerElement.classList.add(...unstickyClasses);
+        headerElement.classList.remove(...stickyClasses);
+    }
 }
 
 

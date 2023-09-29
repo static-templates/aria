@@ -1,11 +1,11 @@
 <!-- This is an invisible div with relative position so that it takes up the height of the menu (because menu is absolute/fixed) -->
 <div class="relative w-full h-20 opacity-0 pointer-events-none"></div>
 <header id="header" class="absolute top-0 z-50 w-full h-20">
-    <div class="flex items-center justify-between h-full max-w-5xl px-5 mx-auto border border-t-0 border-transparent select-none rounded-b-xl">
+    <div class="flex items-center justify-between h-full max-w-5xl px-5 mx-auto border-b border-l-0 border-r-0 border-transparent select-none lg:border-r lg:border-l lg:rounded-b-xl">
         
         <include src="logo.html"></include>
         
-        <nav class="relative flex flex-row-reverse justify-end w-full text-sm text-neutral-500 dark:text-neutral-400 sm:flex-row">
+        <nav class="relative flex flex-row-reverse justify-start w-full text-sm sm:justify-end text-neutral-500 dark:text-neutral-400 sm:flex-row">
             <div id="openMenu" class="flex flex-col items-end justify-center block w-6 h-6 ml-4 cursor-pointer sm:hidden">
                 <svg class="w-8 h-8 dark:text-neutral-200" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 8h16M4 16h16"></path></svg>
             </div>
