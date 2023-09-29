@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function(){
     stickyHeaderFuncionality();
     applyMenuItemClasses();
     evaluateHeaderPosition();
+    mobileMenuFunctionality();
 });
 
 // window.toggleDarkMode = function(){
@@ -48,11 +49,16 @@ window.evaluateHeaderPosition = function(){
         headerElement.firstElementChild.classList.remove(...unstickyClassesContainer);
         headerElement.classList.add(...stickyClasses);
         headerElement.classList.remove(...unstickyClasses);
+        document.getElementById('menu').classList.add('top-[46px]');
+        document.getElementById('menu').classList.remove('top-[75px]');
+
     } else {
         headerElement.firstElementChild.classList.remove(...stickyClassesContainer);
         headerElement.firstElementChild.classList.add(...unstickyClassesContainer);
         headerElement.classList.add(...unstickyClasses);
         headerElement.classList.remove(...stickyClasses);
+        document.getElementById('menu').classList.remove('top-[46px]');
+        document.getElementById('menu').classList.add('top-[75px]');
     }
 }
 
@@ -137,4 +143,34 @@ window.applyMenuItemClasses = function(){
         }
     }
     //:class="{ 'text-neutral-900 dark:text-white': window.location.pathname == '{menu.url}', 'text-neutral-700 dark:text-neutral-400': window.location.pathname != '{menu.url}' }"
+}
+
+
+function mobileMenuFunctionality(){
+    document.getElementById('openMenu').addEventListener('click', function(){
+        openMobileMenu();
+    });
+
+    document.getElementById('closeMenu').addEventListener('click', function(){
+        closeMobileMenu();
+    });
+}
+
+window.openMobileMenu = function(){
+    document.getElementById('openMenu').classList.add('hidden');
+    document.getElementById('closeMenu').classList.remove('hidden');
+    document.getElementById('menu').classList.remove('hidden');
+    document.getElementById('mobileMenuBackground').classList.add('opacity-0');
+    document.getElementById('mobileMenuBackground').classList.remove('hidden');
+
+    setTimeout(function(){
+        document.getElementById('mobileMenuBackground').classList.remove('opacity-0');
+    }, 1);
+}
+
+window.closeMobileMenu = function(){
+    document.getElementById('closeMenu').classList.add('hidden');
+    document.getElementById('openMenu').classList.remove('hidden');
+    document.getElementById('menu').classList.add('hidden');
+    document.getElementById('mobileMenuBackground').classList.add('hidden');
 }

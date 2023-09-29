@@ -1,6 +1,6 @@
 <layout src="main.html" title="My Projects">
 
-    <section class="relative z-20 max-w-2xl mx-auto my-12">
+    <section class="relative z-20 max-w-2xl px-5 mx-auto my-12 lg:px-0">
         <include 
             src="page-heading.html" 
             title="My Projects" 
@@ -8,7 +8,7 @@
         ></include>
 
 
-        <div class="z-50 grid items-stretch w-full grid-cols-2 gap-5 my-8">
+        <div class="z-50 grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2">
             <ForEach collection="projects">
                 <include 
                     src="project.html" 
