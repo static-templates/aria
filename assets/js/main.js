@@ -2,7 +2,7 @@
 
 window.darkMode = false;
 
-const stickyClasses = ['fixed', 'h-12'];
+const stickyClasses = ['fixed', 'h-14'];
 const unstickyClasses = ['absolute', 'h-20'];
 const stickyClassesContainer = ['border-neutral-300/50' , 'bg-white/80', 'dark:border-neutral-600/40', 'dark:bg-neutral-900/60', 'backdrop-blur-2xl'];
 const unstickyClassesContainer = ['border-transparent'];
@@ -49,7 +49,7 @@ window.evaluateHeaderPosition = function(){
         headerElement.firstElementChild.classList.remove(...unstickyClassesContainer);
         headerElement.classList.add(...stickyClasses);
         headerElement.classList.remove(...unstickyClasses);
-        document.getElementById('menu').classList.add('top-[46px]');
+        document.getElementById('menu').classList.add('top-[56px]');
         document.getElementById('menu').classList.remove('top-[75px]');
 
     } else {
@@ -57,7 +57,7 @@ window.evaluateHeaderPosition = function(){
         headerElement.firstElementChild.classList.add(...unstickyClassesContainer);
         headerElement.classList.add(...unstickyClasses);
         headerElement.classList.remove(...stickyClasses);
-        document.getElementById('menu').classList.remove('top-[46px]');
+        document.getElementById('menu').classList.remove('top-[56px]');
         document.getElementById('menu').classList.add('top-[75px]');
     }
 }
