@@ -174,3 +174,65 @@ window.closeMobileMenu = function(){
     document.getElementById('menu').classList.add('hidden');
     document.getElementById('mobileMenuBackground').classList.add('hidden');
 }
+
+
+document.getElementById('searchInput').addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    const posts = document.querySelectorAll('.postItem');
+
+    posts.forEach(post => {
+        const title = post.querySelector('a').textContent.toLowerCase();
+        if (title.includes(query)) {
+            post.style.display = 'block';
+        } else {
+            post.style.display = 'none';
+        }
+    });
+
+    // Update the URL's query string without reloading the page
+    const newURL = window.location.protocol + "//" + window.location.host + window.location.pathname + '?search=' + encodeURIComponent(query);
+    window.history.pushState({path:newURL},'',newURL);
+});
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('search');
+    if (query) {
+        const inputField = document.getElementById('searchInput');
+        inputField.value = query;
+
+        const posts = document.querySelectorAll('.postItem');
+        posts.forEach(post => {
+            const title = post.querySelector('a').textContent.toLowerCase();
+            if (title.includes(query.toLowerCase())) {
+                post.style.display = 'block';
+            } else {
+                post.style.display = 'none';
+            }
+        });
+    }
+});
+
+document.getElementById('searchInput').addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    const posts = document.querySelectorAll('.postItem');
+    let postFound = false; // To check if at least one post is found
+
+    posts.forEach(post => {
+        const title = post.querySelector('a').textContent.toLowerCase();
+        if (title.includes(query)) {
+            post.style.display = 'block';
+            postFound = true;
+        } else {
+            post.style.display = 'none';
+        }
+    });
+
+    // Display the noPostsFound div if no posts are visible
+    const noPostsFoundDiv = document.getElementById('noPostsFound');
+    if (postFound) {
+        noPostsFoundDiv.classList.add('hidden');
+    } else {
+        noPostsFoundDiv.classList.remove('hidden');
+    }
+});

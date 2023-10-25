@@ -8,7 +8,9 @@
         ></include>
 
         <div class="z-50 flex flex-col items-stretch w-full gap-5 my-8">
+            <input type="text" id="searchInput" placeholder="Search posts..." class="w-full h-10 px-3 text-sm border border-dashed rounded-md focus:ring-0 focus:outline-black border-neutral-400 dark:border-neutral-600 dark:bg-neutral-800 dark:placeholder-neutral-400 dark:text-white" />
             <include src="posts-loop.html" count="10"></include>
+            <div id="noPostsFound" class="hidden mt-4 text-center text-gray-600">No posts were found.</div>
         </div>
 
     </section>
