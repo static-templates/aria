@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Add Your Custom CSS Here */
 
@@ -62,5 +62,32 @@ html.dark #darkToggle:hover .horizon{
     to {
         opacity: 1;
         transform: translate3d(0, 10, 0)
+    }
+}
+
+
+.dark{
+    .prose{
+        @apply text-white;
+        code{
+            @apply text-stone-200 bg-stone-700 rounded;
+        }
+        pre{
+            code{
+                @apply bg-transparent;
+            }
+        }
+        p{
+            @apply text-stone-400;
+            code{
+                @apply text-stone-200 bg-stone-700 p-1 rounded;
+            }
+        }
+        h1, h2, h3, h4, h5, h6, strong, i{
+            @apply text-stone-200;
+        }
+        a{
+            @apply text-stone-100;
+        }
     }
 }
