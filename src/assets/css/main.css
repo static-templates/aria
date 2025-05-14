@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -70,7 +70,7 @@ html.dark #darkToggle:hover .horizon{
     .prose{
         @apply text-white;
         code{
-            @apply rounded text-stone-200 bg-stone-700;
+            @apply rounded-sm text-stone-200 bg-stone-700;
         }
         pre{
             code{
@@ -80,7 +80,7 @@ html.dark #darkToggle:hover .horizon{
         p{
             @apply text-stone-400;
             code{
-                @apply p-1 rounded text-stone-200 bg-stone-700;
+                @apply p-1 rounded-sm text-stone-200 bg-stone-700;
             }
         }
         h1, h2, h3, h4, h5, h6, strong, i{
