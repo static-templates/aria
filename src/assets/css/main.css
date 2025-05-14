@@ -70,7 +70,7 @@ html.dark #darkToggle:hover .horizon{
     .prose{
         @apply text-white;
         code{
-            @apply text-stone-200 bg-stone-700 rounded;
+            @apply rounded text-stone-200 bg-stone-700;
         }
         pre{
             code{
@@ -80,7 +80,7 @@ html.dark #darkToggle:hover .horizon{
         p{
             @apply text-stone-400;
             code{
-                @apply text-stone-200 bg-stone-700 p-1 rounded;
+                @apply p-1 rounded text-stone-200 bg-stone-700;
             }
         }
         h1, h2, h3, h4, h5, h6, strong, i{
