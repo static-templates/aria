@@ -38,7 +38,7 @@ jobs:
       - name: Run NPM Install
         run: npm install
       - name: Run the static build step
-        run: npx @devdojo/static@1.1.0 build
+        run: npx @devdojo/static@1.0.31 build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
